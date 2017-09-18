@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/letshuddleup/go-mailchimp/status"
+	"github.com/RichardKnop/go-mailchimp/status"
 )
 
 // UpdateSubscription ...
