@@ -11,8 +11,7 @@ import (
 // Subscribe ...
 func (c *Client) Subscribe(listID string, email string, subscriberStatus string, mergeFields map[string]interface{}) (*MemberResponse, error) {
 	//Check provided status
-	if (subscriberStatus == "")
-	{
+	if subscriberStatus == "" {
 		subscriberStatus = status.Pending
 	}
 	// Make request
