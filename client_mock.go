@@ -35,7 +35,7 @@ func (_m *ClientMock) CheckSubscription(listID string, email string) (*MemberRes
 }
 
 // Subscribe ...
-func (_m *ClientMock) Subscribe(listID string, email string, mergeFields map[string]interface{}) (*MemberResponse, error) {
+func (_m *ClientMock) Subscribe(listID string, email string, subscriberStatus string, mergeFields map[string]interface{}) (*MemberResponse, error) {
 	ret := _m.Called(listID, email, mergeFields)
 
 	var r0 *MemberResponse
