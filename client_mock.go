@@ -80,6 +80,29 @@ func (_m *ClientMock) UpdateSubscription(listID string, email string, mergeField
 	return r0, r1
 }
 
+// RemoveSubscription ...
+func (_m *ClientMock) RemoveSubscription(listID string, email string, mergeFields map[string]interface{}) (*MemberResponse, error) {
+	ret := _m.Called(listID, email, mergeFields)
+
+	var r0 *MemberResponse
+	if rf, ok := ret.Get(0).(func(string, string, map[string]interface{}) *MemberResponse); ok {
+		r0 = rf(listID, email, mergeFields)
+	} else {
+		if ret.Get(0) != nil {
+			r0 = ret.Get(0).(*MemberResponse)
+		}
+	}
+
+	var r1 error
+	if rf, ok := ret.Get(1).(func(string, string, map[string]interface{}) error); ok {
+		r1 = rf(listID, email, mergeFields)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // SetBaseURL ...
 func (_m *ClientMock) SetBaseURL(baseURL *url.URL) {
 	_m.Called(baseURL)
